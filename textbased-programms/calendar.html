@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calendar</title>	
+	<link rel="stylesheet" href="dom-output.css" />
+	<link rel="stylesheet" href="dfhi.css" />
+	<style>
+		table {
+			text-align: right;
+			padding: 1ex;
+		}
+		td {
+			width: 3ex;
+		}
+		.calendar-title {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<p class="description">Geben Sie den Monat und das Jahr ein, um einen Kalender des Monates anzeigen zu lassen!</p>
+<label for="argv">Syntax: <code>Monat Jahr</code></label> <input type="text" id="argv" name="argv" value="11 2023" />
+<button name="run" id="run" >Ok</button>
+
+
+<pre id="text-output"></pre>
+<script type="module" src="calendar_2024.js"></script>
+
+</body>
+</html>
