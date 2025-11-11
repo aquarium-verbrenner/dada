@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class ControlFlowTestDrive {
+  
+  public static void main(String[] args) {
+    Scanner inputScanner = new Scanner(System.in);
+
+    System.out.println("Name : ");
+    String name = inputScanner.nextLine();
+    System.out.println("Hallo " + name);
+
+     inputScanner.close();
+  }
+}

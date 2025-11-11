@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class ControlFlowTestDrive {
+  
+  public static void main(String[] args) {
+    Scanner inputScanner = new Scanner(System.in);
+
+    String name = inputScanner.nextLine();
+    if (name.isEmpty()) {
+      System.out.println("Bitte geben Sie ein Name.");
+    } else {
+      System.out.println("Hallo " + name);
+    }
+
+    inputScanner.close();
+  }
+}
