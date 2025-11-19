@@ -12,6 +12,7 @@ public class DeclarationAssignmentTestDrive {
         
         Byte byteValue = -50;
         int intValue = byteValue;
+        byteValue = intValue;
         System.out.println(intValue);
         
         Long longValue = 15000000000l;

@@ -22,6 +22,7 @@ public class DogTestDrive {
         dog2.age = 12;
         dog2.breed = "Jagt terrier";
         dog2.name = "Stab";
+        System.out.println(dog1);
         System.out.println("Mon chien s'appelle " + dog2.name + ", il a " + dog2.age + " ans et c'est un " + dog2.breed + ".");
         dog2.printDog();
         dog2.bark();
