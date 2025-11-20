@@ -1,31 +1,42 @@
-import {terminal} from "./dfhi.js";
+const btnRun = document.getElementById('run');
+console.log(btnRun);
+btnRun.addEventListener('click', e => {
+    const f = document.getElementById('Fs').value;
+    const s = document.getElementById('s').value;
+    const r = bissection(f, s);
+    document.getElementById('text-output').innerHTML = r;
+});
 
-window.main =(...args) => {
-    terminal.clear()
+function fAlpha (alpha, FS, S) {
+    return (alpha - Math.sin(alpha)) / Math.pow(Math.sin(alpha / 2), 2) - 8 * FS / (S * S);
+}
 
-    const d = Number(args[0]);
-    const alpha = Number(args[2]);
-    const Fs = Number(args[3]);
-    const s = Number(args[4]);
+function bissection (fs, s, tol = 1e-10) {
+    let a = 0.00001;
+    let b = Math.PI - 0.00001;
+    let mid;
 
-    function fAlpha (alpha, Fs, s) {
-        return (alpha - Math.sin(alpha)) / Math.pow(Math.sin(alpha / 2), 2) - 8 * Fs / (s * s);
+    let fa = fAlpha(a, fs, s);
+    let fb = fAlpha(b, fs, s);
+
+    if(fa * fb > 0) {
+        console.log("Function does not work, please type other Fs and s values.");
     }
 
-    function bissection (Fs, s) {
-        let a = 0;
-        let b = Math.PI;
-        let mid;
+    while ((b - a) > tol) {
+        mid = (a + b) / 2;
+        let fm = fAlpha(mid, fs, s);
 
-        let fa = fAlpha(a, Fs, s);
-        let fb = fAlpha(b, Fs, s);
-
-        if(fa * fb > 0) {
-            terminal.print("Function does not work, please type other Fs and s values.");
+        if (fa * fm <= 0) {
+            b = mid;
+            fb = fm;
+        } else {
+            a = mid;
+            fa = fm;
         }
-
-        while
     }
+    return (a + b) / 2;
+}
 
 
-};
+
