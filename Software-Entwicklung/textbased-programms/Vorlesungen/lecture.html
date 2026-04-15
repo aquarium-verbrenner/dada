@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernplan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lernplan</h1>
+        <p>Geben sie die informationen des Fachs ein</p>
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="lecture">Vorlesungs Name</label>
+                <input type="text" id="lecture" placeholder="name">
+
+                <label for="ects">ECTS anzahl</label>
+                <input type="number" id="ects" placeholder="0-9999">
+
+                <label for="ds">wie viele Doppelstunden (1h30) (Vorlesung, Tutorial, Übung, ect.) haben sie in der woche</label>
+                <input type="number" id="ds" placeholder="0-9999">
+            </div>
+        </div>
+        
+        <button id="calculator" onclick="calculateEffort()">Vorlesungsplan anzeigen</button>
+
+        <p id="result"></p>
+        
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>
+                        Vorlesung
+                    </th>
+                    <th>
+                        ECTS
+                    </th>
+                    <th>
+                        Zeitauffwand pro Woche
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

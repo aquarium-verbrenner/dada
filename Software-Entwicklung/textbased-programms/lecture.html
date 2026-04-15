@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Calculator</title>
+</head>
+<body>
+
+<label for="ects">Name:</label>
+<input type="text" name="name" id="name" value="">
+
+<label for="ects">ECTS:</label>
+<input type="number" name="ects" id="ects" value="">
+
+<label for="lecturePerWeek">Anzahl der DS pro Woche:</label>
+<input type="number" name="lecturePerWeek" id="lecturePerWeek" value="">
+
+<label for="duration">Vorlesungszeit (Wochen):</label>
+<input type="number" name="duration" id="duration" value="">
+
+<button type="button" id="calculateEffort">Berechnen!</button>
+
+<p>
+<table>
+    <thead>
+    <tr>
+        <th>Vorlesung</th>
+        <th>ECTS</th>
+        <th>DS pro Woche</th>
+        <th>Vorlesungszeit</th>
+        <th>Zeitaufwand pro Woche</th>
+    </tr>
+    </thead>
+    <tbody id="lectureTableBody"></tbody>
+</table>
+</p>
+
+<p>
+    Der wöchentliche Aufwand für Vor- und Nacharbeit beträgt:
+    <span id="lectureEffort">0</span> Stunden.
+</p>
+
+<script src="lecture.js" type="module"></script>
+</body>
+</html>

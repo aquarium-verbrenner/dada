@@ -1,0 +1,56 @@
+PROGRAMMSTART
+
+    Lese die erste Zahl von der Benutzer:in ein (Zahl1).
+    Lese die zweite Zahl von der Benutzer:in ein (Zahl2).
+    Frage den arithmetischen Operator ab (+, -, *, /).
+
+    Prüfe, ob der eingegebene Operator gültig ist.
+    FALLS NEIN:
+        Gebe eine Fehlermeldung aus ("Ungültiger Operator").
+        Beende das Programm (oder springe zum Ende).
+
+    Prüfe, ob eine Division durch Null vorliegt (Operator ist '/' UND Zahl2 ist 0).
+    FALLS JA:
+        Gebe eine hilfreiche Fehlermeldung aus ("Division durch Null nicht möglich").
+        Beende das Programm.
+
+    FALLS die Eingaben gültig sind:
+        Führe die Berechnung durch.
+        Gebe das Ergebnis der Berechnung aus.
+
+PROGRAMMENDE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DÉBUT DU PROGRAMME
+
+    Afficher "Entrez le premier nombre :"
+    Lire nombre1
+    Afficher "Entrez le deuxième nombre :"
+    Lire nombre2
+    Afficher "Entrez l'opérateur (+, -, *, /) :"
+    Lire operateur
+
+    SI l'opérateur n'est PAS l'un des suivants (+, -, *, /) ALORS
+        Afficher "Erreur : Opérateur invalide."
+    
+    SINON SI l'opérateur est "/" ET que nombre2 est égal à 0 ALORS
+        Afficher "Erreur : Division par zéro impossible."
+
+    SINON
+        Calculer le résultat selon l'opérateur choisi (nombre1 op nombre2)
+        Afficher "Le résultat est : " + résultat
+    FIN SI
+
+FIN DU PROGRAMME

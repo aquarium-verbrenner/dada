@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9; /* Hellgrauer Hintergrund */
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center;     /* Zentriert vertikal */
+    min-height: 100vh;       /* Volle Bildschirmhöhe */
+    margin: 0;
+}
+
+/* Der Hauptcontainer (die weiße Karte) */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px; /* Maximale Breite */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sanfter Schatten */
+    text-align: center;
+}
+
+/* Überschriften und Text */
+h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Eingabebereich */
+.input-wrapper {
+    text-align: left; /* Labels linksbündig */
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block; /* Macht das Label zur eigenen Zeile */
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+input { 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Der Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98); /* Kleiner Klick-Effekt */
+}
+
+/* Das Ergebnisfeld */
+#result {
+    margin-top: 25px;
+    background-color: #eef2f7;
+    border-left: 5px solid #007bff; /* Blauer Akzentbalken links */
+    padding: 15px;
+    border-radius: 4px;
+    text-align: left;
+    display: none; /* Versteckt, bis Inhalt da ist (siehe JS Hinweis unten) */
+}
+
+/* Wenn Inhalt im Result ist, anzeigen (Optionaler Trick) */
+#result:not(:empty) {
+    display: block;
+}
+
+#result p {
+    margin: 8px 0;
+    color: #2c3e50;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ddd; /* Trennlinie zwischen Werten */
+    padding-bottom: 5px;
+}
+
+#result p:last-child {
+    border-bottom: none;
+}
+
+/* Tabellen Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* Damit die runden Ecken sichtbar bleiben */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Hover-Effekt für Zeilen */
+}
+
+table tbody tr:last-of-type td {
+    border-bottom: 2px solid #007bff; /* Abschlusslinie */
+}

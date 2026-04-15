@@ -1,0 +1,4 @@
+1. terminal.clear()
+
+5. Weil Leerzeichen die verschiedenen Argumente in diesem Programm trennen.
+   Er muss "" verwenden.
