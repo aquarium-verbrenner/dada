@@ -3,7 +3,7 @@
 int main() {
     double nettopreis;
 
-    printf("Geben Sie den Nettopreis ein (ex: 100.00): ");
+    printf("Geben Sie den Nettopreis ein : ");
     if (scanf("%lf", &nettopreis) != 1) {
         printf("Fehler bei der Eingabe.\n");
         return 1;
